@@ -1,29 +1,23 @@
-import React from "react"
+import React from 'react'
+import Hero from "../components/Hero"
 import Layout from "../components/Layout"
-import Hero2 from "../components/Hero2"
-import Work from '../components/Work'
-import Posts from "../components/Posts"
-import {graphql} from "gatsby"
-import "./mystyles.scss"
-import "../css/main.css"
+import Posts from '../components/Posts'
+import {graphql} from 'gatsby'
 
-
-
-export default function Home({data}) {
-  const {allMdx:{nodes:posts}}=data
-  return (
+const postsPage = ({data}) => {
+    const {allMdx:{nodes:posts}}=data
+    return (
   <Layout>
-    <Hero2/>
-    <Work/>
+    <Hero/>
+    <Posts posts={posts} title="recently published" />
   </Layout>
-  )
+    )
 }
 
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
+    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
       nodes {
-        excerpt
         frontmatter {
           title
           author
@@ -44,3 +38,5 @@ export const query = graphql`
     }
   }
 `
+
+export default postsPage

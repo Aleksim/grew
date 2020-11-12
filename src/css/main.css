@@ -1,0 +1,106 @@
+/*generic*/
+.movetocenter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.showborder {
+  border-width: 3px;
+  border-style: solid;
+  border-color: red;
+}
+
+/*frontpage*/
+.logo {
+  color: #4b2866;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.connect {
+  font-style: italic;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: #5e4473;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+/*work page*/
+
+.work-bg {
+  background-color: #00d0d1;
+}
+
+.work-title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.125;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 3rem;
+}
+/* Post.js component */
+.post-title {
+  color: #000;
+  font-family: "Permanent Marker";
+  font-size: 3rem;
+}
+
+.post-excerpt {
+  color: #000;
+  font-family: "Roboto";
+  font-size: 1.3rem;
+}
+
+/* generic background */
+.generic-background {
+  background-color: #f7f5fb;
+}
+
+.hero-color {
+  background-color: #f7f5fb;
+}
+
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid red;
+  border-bottom: red;
+  margin: 1em 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0;
+}
+
+/* post item  */
+.post-item {
+  margin-bottom: 40px;
+  background-color: #2a2c2c;
+  color: aliceblue;
+}
+
+.post-title {
+  color: aliceblue;
+}
+
+.link-style {
+  font-weight: 900;
+}
+
+/*footer color*/
+.footer-background {
+  background: #f7f5fb;
+}
