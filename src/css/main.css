@@ -13,6 +13,24 @@
 }
 
 /*frontpage*/
+
+.grew-hero {
+  height: 90vh;
+}
+
+.grew-flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-end;
+}
+
+.container-stretch {
+  height: 80vh;
+}
+
 .logo {
   color: #4b2866;
   font-size: 3rem;
@@ -27,6 +45,19 @@
   line-height: 1.25;
 }
 
+.button-gen {
+  margin-bottom: 30px;
+}
+
+.button-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
 .connect {
   font-style: italic;
   font-size: 0.875em;
@@ -37,7 +68,7 @@
     Arial, sans-serif;
 }
 
-/*work page*/
+/*work component*/
 
 .work-bg {
   background-color: #00d0d1;
@@ -47,21 +78,45 @@
   color: #fff;
   font-size: 3rem;
   line-height: 1.125;
+  font-weight: 600;
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem 3rem;
 }
+
+.grew-container-wide {
+  max-width: 1344px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 3rem 3rem;
+  margin-bottom: 3rem;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(10, 22, 70, 0.1),
+    0 0 1px 0 rgba(10, 22, 70, 0.06);
+}
+
+.work-p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 /* Post.js component */
 .post-title {
   color: #000;
-  font-family: "Permanent Marker";
   font-size: 3rem;
 }
 
-.post-excerpt {
-  color: #000;
-  font-family: "Roboto";
-  font-size: 1.3rem;
+.date-line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
 }
 
 /* generic background */
@@ -88,12 +143,6 @@
 /* post item  */
 .post-item {
   margin-bottom: 40px;
-  background-color: #2a2c2c;
-  color: aliceblue;
-}
-
-.post-title {
-  color: aliceblue;
 }
 
 .link-style {

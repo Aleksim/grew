@@ -18,6 +18,7 @@ export const query = graphql`
   {
     allMdx(sort: {fields: frontmatter___date, order: DESC}) {
       nodes {
+        excerpt
         frontmatter {
           title
           author
@@ -27,7 +28,7 @@ export const query = graphql`
           readTime
           image {
             childImageSharp {
-              fluid {
+              fluid (maxWidth: 500) {
                 ...GatsbyImageSharpFluid
               }
             }
