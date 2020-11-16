@@ -4,16 +4,16 @@ import "../../css/main.css"
 
 const Posts = ({posts, title}) => {
     return (
-        <section className="section">
+        <div className="section">
             <div className="container is-max-desktop">
-                
-                <article>
+
+                <article className="list-items">
                     {posts.map(post=>{
                         return <Post key={post.id} {...post}  />
                     })}
                 </article>
             </div>
-        </section>
+        </div>
     )
 }
 

@@ -1,33 +1,65 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-
 import Image from 'gatsby-image'
-
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { Link } from "gatsby"
+import { GoPerson } from "react-icons/go";
+import { FaDiscord, FaTwitter, FaLinkedinIn, FaGithub} from "react-icons/fa"
+
+
+
 const PostTemplate = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, category, image, date },
+      frontmatter: { title, category, image, date, author},
       body,
     },
   } = data
   return (
     <Layout>
-      <Hero />
-        {/*post info*/}
-        <section className="container is-max-desktop">
-          <div >
-            <span>{category}</span>
-            <h2>{title}</h2>
-            <p>{date}</p>
-            <div ></div>
+      
+        <div className="section">
+          <div className="container" >
+            {/*image*/}
+            <div className="movetocenter">
+              <Image className="big-image" style={{
+                  
+                  marginLeft: "5px",
+                  marginRight: "5px",
+              }} fluid={image.childImageSharp.fluid}/>
+            </div>
+
+            <h2 className="logo">{title}</h2>
+
+            {/*author info*/}
+            <div className="upperbanner">
+              <div className="">
+                <div className="person-name-icon">
+                  <h2>Written by {author}</h2>
+                    <FaTwitter size={20} style={{ marginLeft:"10px", color:"#1DA1F2"}}/>    
+                </div>
+                <div className="category-date">
+                  <p style={{marginRight:"10px"}}>
+                    {date}
+                  </p>
+                  <Link to={`/${category}`}>
+                    <span class="tag is-link">
+                      {category}
+                    </span>
+                  </Link>
+                </div>
+              </div>
+              <div className="">
+                {/*Share functionality later */}
+              </div>
+            </div>
+            <div className="post-template-text">
+                <MDXRenderer>{body}</MDXRenderer>
+            </div>
           </div>
-          <div className="content">
-          <MDXRenderer>{body}</MDXRenderer>
-      </div>
-        </section>
+        </div>
 
     </Layout>
   )
@@ -39,6 +71,7 @@ export const query = graphql`
       frontmatter {
         title
         category
+        author
         date(formatString: "MMMM Do, YYYY")
         image {
           childImageSharp {

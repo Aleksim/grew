@@ -18,7 +18,6 @@ const Post = ({ frontmatter, excerpt }) => {
     <div className="columns">
       <div className="column">
         <Image style={{
-                        width:"50%",
                         marginLeft: "5px",
                         marginRight: "5px",
                     }} fluid={image.childImageSharp.fluid}/>
@@ -27,32 +26,57 @@ const Post = ({ frontmatter, excerpt }) => {
           <p className="post-title logo">
               {title}
           </p>
-          <span class="tag is-link">{category}</span>
-          <p>
-            Author: {author}
-          </p>
+            <hr  style={{
+              color: '#f1eff5',
+              backgroundColor: '#f1eff5',
+              height: .5,
+              borderColor : '#f1eff5'
+          }}/>
+        <Link to={`/${category}`}>
+          <span class="tag is-link">
+            {category}
+          </span>
+        </Link>
+          <div className="text-excerpt">
+              <p>{excerpt}</p>
+          </div>
+            <Link to={`/posts/${slug}`}>
+              <button className="button-gen button is-primary is-small">
+                <span className="button-items">
+                  <strong>CONTINUE READING</strong>
+                </span>
+              </button>
+            </Link>
+            
+            <hr  style={{
+              color: '#f1eff5',
+              backgroundColor: '#f1eff5',
+              height: .1,
+              borderColor : '#f1eff5',
+              marginTop:"-5px",
+          }}/>
 
-          
-          <p>{excerpt}</p>
-          
-          <div className="columns">
-            <div className="column">
-              <p>
-                Readtime: {readTime} min
-              </p>
+          <div className="time-date">
+            <div className="time-post">
+              <small>
+                <em>
+                  {readTime} min read                
+                </em>
+              </small>
             </div>
-            <div className="column">
+            <div className="time-date">
               <div className="date-line">
-                <MdDateRange size={25} style={{ marginRight:"10px", color:"#000"}}/>
-                {date}
+                
+                <MdDateRange size={15} style={{ marginRight:"10px", color:"#000"}}/>
+                
+                <small>
+                  <em>
+                    {date}               
+                  </em>
+                </small>
               </div>
             </div>
           </div>
-          <button className="button-gen button is-primary is-large">
-              <span className="button-items">
-                <strong>Read More</strong>
-              </span>
-            </button>
 
       </div>
   </div>

@@ -1,24 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
 import "../pages/mystyles.scss"
 
-import Navlinks from "../constants/Navlinks"
-
-const getLogo = graphql`
-  {
-    fixed: file(relativePath: { eq: "umadfav.png" }) {
-      childImageSharp {
-        fixed {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 const Nav = () => {
-  const data = useStaticQuery(getLogo)
     return (
 
     <nav className="navbar">
@@ -33,7 +17,7 @@ const Nav = () => {
   </div>
   <div id="navbarMenuHeroA" className="navbar-menu">
     <div className="navbar-end">
-      <a className="navbar-item is-active">
+      <a className="navbar-item is-active" href="/">
           home
       </a>
       <a className="navbar-item" href="/posts">

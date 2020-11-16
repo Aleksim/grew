@@ -12,6 +12,8 @@
   border-color: red;
 }
 
+/* navbar */
+
 /*frontpage*/
 
 .grew-hero {
@@ -108,6 +110,7 @@
 .post-title {
   color: #000;
   font-size: 3rem;
+  text-align: center;
 }
 
 .date-line {
@@ -119,6 +122,82 @@
   align-content: stretch;
 }
 
+.text-excerpt {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.time-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+/*post index*/
+
+.recently {
+  text-decoration: underline;
+}
+
+.list-items {
+  margin-top: 20px;
+}
+
+/*post template component*/
+
+@media screen and (min-width: 992px) {
+  .big-image {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .big-image {
+    width: 100%;
+  }
+}
+
+.upperbanner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.person-name-icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.post-template-title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.category-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.post-template-text {
+  margin-right: 10px;
+  margin-left: 10px;
+}
 /* generic background */
 .generic-background {
   background-color: #f7f5fb;
@@ -152,4 +231,13 @@
 /*footer color*/
 .footer-background {
   background: #f7f5fb;
+}
+
+.footer-control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
 }

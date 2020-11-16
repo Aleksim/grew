@@ -16,7 +16,7 @@ const Footer = () => {
               <a href="https://github.com/Grew-dev/grew-privacy-policy" target="_blank">Privacy Policy</a>
           </div>
           <div className="column">
-        <div className="field-body" style={{marginTop:"10px"}}>
+        <div className="field-body footer-control" style={{marginTop:"10px"}}>
           <div className="field has-addons">
             <p className="control">
               <a href="https://twitter.com/Grewdev" target="_blank" class="button">
