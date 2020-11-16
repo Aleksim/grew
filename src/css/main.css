@@ -13,8 +13,36 @@
 }
 
 /* navbar */
+.spans {
+  background-color: #fff;
+}
+
+.nav-logo {
+  color: #4b2866;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.nav-item {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
 
 /*frontpage*/
+
+@media screen and (min-width: 992px) {
+  .space {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .space {
+    height: 0px;
+  }
+}
 
 .grew-hero {
   height: 90vh;

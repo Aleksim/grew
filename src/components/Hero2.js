@@ -14,7 +14,8 @@ const Hero2 = () => {
     return (
 <div className="section hero-color ">
   <div className="container">
-  
+    <div className="space">
+    </div>
     <h1 className="logo">
       Grew.
     </h1>
@@ -24,7 +25,7 @@ const Hero2 = () => {
     <h2 className="subtitle">
       100% independent and self-funded by <a href="https://twitter.com/ihmissuti">@ihmissuti</a>, <a href="https://twitter.com/aleksimmonen">@aleksimmonen</a>, <a href="https://twitter.com/Jmeriluoto">@JMeriluoto</a>.
     </h2>
-    <button onClick={()=>{openInNewTab('https://discord.gg/tjyaZDY')}} className="button-gen button is-primary is-large">
+    <button onClick={()=>{openInNewTab('https://discord.gg/WG7YQSeRz4')}} className="button-gen button is-primary is-large">
         <span className="button-items">
           <strong>Talk to us at Discord</strong>
           <FaDiscord size={25} style={{ marginLeft:"5px"}}/>
