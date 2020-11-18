@@ -1,0 +1,65 @@
+.code {
+  background: #1e1e1e;
+  color: var(--clr-primary-5);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  overflow-x: scroll;
+  position: relative;
+}
+.code pre {
+  font-family: "Courier New", Courier, monospace;
+}
+.code .token-line {
+  line-height: 1.5;
+}
+
+.nice-text {
+  background: var(--clr-primary-10);
+  padding: 2rem 1.5rem;
+  color: var(--clr-grey-1);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--clr-primary-5);
+  color: var(--clr-black);
+  position: relative;
+}
+.nice-text h4,
+.nice-text p {
+  color: var(--clr-black);
+}
+.nice-text p {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .nice-text {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+.nice-text-icon {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  background: var(--clr-white);
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid var(--clr-white);
+  color: var(--clr-primary-5);
+}
+.mdx-page {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 4rem auto;
+}
+.mdx-img p {
+  width: 20rem;
+}
+.mdx-img .gatsby-resp-image-image,
+.mdx-img .gatsby-resp-image-background-image {
+  border-radius: 50px;
+  height: 20rem;
+  object-fit: cover;
+}
