@@ -1,7 +1,12 @@
 import * as Headings from "./Headings"
-import Example from  './Example'
+import * as Texts from "./Texts"
+import * as Lists from "./Lists"
+import Code from  './Code'
+
 
 export{
     Headings,
-    Example
+    Texts,
+    Code,
+    Lists
 }

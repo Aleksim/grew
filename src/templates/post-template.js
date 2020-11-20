@@ -38,7 +38,6 @@ const PostTemplate = ({ data }) => {
               <div className="">
                 <div className="person-name-icon">
                   <h2>Written by {author}</h2>
-                    <FaTwitter size={20} style={{ marginLeft:"10px", color:"#1DA1F2"}}/>    
                 </div>
                 <div className="category-date">
                   <p style={{marginRight:"10px"}}>

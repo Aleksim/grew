@@ -1,29 +1,41 @@
 import React from "react"
-import "../../css/main.css"
+import "../../css/mdx.css"
 
 
-{/*myH2 */}
-const myH2 = ({ children, title }) => {
-  if (title) {
-    return (
-      <div className="headings-two">
-        <h2>{children}</h2>
-        <div className="headings-underline">
-        </div>
-      </div>
-    )
-  }
+{/* basicH2 */}
+const basicH2 = props => {
   return (
     <h2
-      style={{
-        margin: "2rem 0",
-        color: "var(--clr-grey-5)",
-      }}
+      className="basic-h2"
     >
-      {children}
+      {props.children}
     </h2>
   )
 }
+
+
+// {/*myH2 */}
+// const myH2 = ({ children, title }) => {
+//   if (title) {
+//     return (
+//       <div className="headings-two">
+//         <h2>{children}</h2>
+//         <div className="headings-underline">
+//         </div>
+//       </div>
+//     )
+//   }
+//   return (
+//     <h2
+//       style={{
+//         margin: "2rem 0",
+//         color: "green",
+//       }}
+//     >
+//       {children}
+//     </h2>
+//   )
+// }
 
 
 
@@ -36,4 +48,4 @@ const myH4 = props => {
   )
 }
 
-export { myH2, myH4 }
+export { basicH2 }

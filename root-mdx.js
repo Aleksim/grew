@@ -1,18 +1,17 @@
 import React from 'react'
 import {MDXProvider} from '@mdx-js/react'
-import {Headings, Example} from './src/components/Complete/'
+import {Headings, Texts, Code, Lists} from './src/components/Complete/'
+import { basicH2 } from './src/components/Complete/Headings'
 
 
-const Testing = ({children})=>{
-return <div className="code">{children}</div>
-}
 
 const components ={
-    h2: Headings.myH2,
+    h1: Headings.myH1,
+    p: Texts.myP,
+    h2: basicH2,
     h4: Headings.myH4,
-    inlineCode: Testing,
-    blockquote: Testing,
-    pre: Example
+    pre: Code,
+    ul: Lists.basicList
 }
 
 export const wrapMDX = ({element}) =>{

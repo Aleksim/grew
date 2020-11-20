@@ -1,45 +1,72 @@
 ---
-title: Backroads Tours
-slug: backroads-tours
+title: Get User Location Securely in JavaScript without Privacy-Hassle
+slug: get-user-location-securely-in-javascript-without-privacy-hassle
 image: ./images/maisema.jpg
-date: 2020-05-02
-author: john smith
-category: HTML&CSS
-readTime: 50
+date: 2020-11-19
+author: Kimmo Ihanus
+category: Tools
+readTime: 2
 ---
 
 import { Link } from "gatsby"
 
-_I'm baby humblebrag neutra taiyaki af vice bespoke locavore fanny pack_ ramps vexillologist succulents. Normcore etsy pour-over adaptogen skateboard fashion axe, bushwick food truck beard lumbersexual master cleanse actually deep v. **Retro cardigan raw denim franzen kickstarter you probably haven't heard of them literally** aesthetic snackwave four dollar toast. Keffiyeh synth umami, helvetica yr flexitarian jean shorts banh mi cardigan leggings letterpress paleo intelligentsia narwhal.
+To detect your website or webapp users’ location, you have options to either use browser’s Geolocation API or the client’s IP-address. Whether your goal is to eg. personalize content, target advertisement, or create redirects, you need to send your users’ latitude and longitude data, or IP-address to a third-party geocoding service. These services extract the readable place names from the data and return it to your client.
 
-<blockquote>
-  I'm baby tumblr fanny pack tousled seitan. Man bun shaman yr, bushwick fam
-  hammock williamsburg kombucha keytar VHS. Chambray street art authentic,
-</blockquote>
+<p>
+  The process is straightforward, but it comes with privacy drawbacks. The
+  minimum action that a responsible developer should do is to update their
+  website’s privacy policy. In some use-cases it’s necessarily to consult
+  lawyers what GDPR / CCPA states about the usage and sharing of location data.
+</p>
 
-<blockquote display="info">
-  I'm baby tumblr fanny pack tousled seitan. Man bun shaman yr, bushwick fam
-  hammock williamsburg kombucha keytar VHS. Chambray street art authentic,
-</blockquote>
+## Hyper-secure location detection with pointNG
 
-```jsx
-import React from "react"
+To save time and avoid privacy-headaches, follow these steps to identify your user’s GPS-based location without sending their coordinates away from the browser.
 
-const Counter = () => {
-  const [count, setCount] = React.useState(0)
-  return (
-    <section className="counter">
-      <h4>show some love to MDX</h4>
-      <h4>likes {count}</h4>
-      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
-        i like mdx
-      </button>
-    </section>
-  )
-}
-export default Counter
+<ul>
+  <li>
+    1. Install pointNG location detection javascript plugin to your website:
+  </li>
+</ul>
+
+```js
+<script src="https://cdn.pointng.io/pointng.js"></script>
 ```
 
-<Link to="/posts" className="btn center-btn">
-  all posts
-</Link>
+<ul>
+  <li>2. Paste this code below to initialize and configure pointNG:</li>
+</ul>
+
+```js
+const pointng = new PointNG({
+ level: ‘country’,
+ api_key: ‘YOUR-API-KEY-HERE’,
+ useIpGeolocation: false
+});
+```
+
+Use the ‘level’ parameter to choose the level you wish to identify your users’
+location. Options are ‘continent’, ‘country’, ‘state’ and ‘city’. If a user
+declines your website to use her GPS-location, pointNG uses the device time
+zone as the default fallback to estimate the location. You can also opt-in to
+use IP-address based geocoding as a fallback by passing “useIpGeolocation:
+true” parameter to the installation script.
+
+<ul>
+  <li>
+    3. Sign up <a>here</a> to whitelist your domain, and grab your free API-key.
+    Paste the key to the initialization script’s ‘api_key’ parameter.
+  </li>
+</ul>
+
+## Do your magic!
+
+That’s it! Now you are ready to start building location-based web services securely without the fear of data misuses and privacy headaches.
+Below is an example of a basic implementation that prompts the user for location permission and console.logs the users’ location.
+
+```js
+<script src="https://cdn.pointng.io/pointng.js"></script>
+const pointng = new PointNG({ level: "continent", api_key: "YOUR-API-KEY-HERE", })
+pointng.getLocation().then(function (prediction) { console.log(prediction.city)
+//Do your magic here })
+```

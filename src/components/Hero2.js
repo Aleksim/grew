@@ -32,12 +32,12 @@ const Hero2 = () => {
         </span>
       </button>
       <div className="field">
-        <small>
+        <small className="hero-control">
           <em>
             ...or connect in other channels
           </em>
         </small>
-        <div className="field-body" style={{marginTop:"10px"}}>
+        <div className="field-body hero-control" style={{marginTop:"10px"}}>
           <div className="field has-addons">
             <p className="control">
               <a href="https://twitter.com/Grewdev" target="_blank" class="button">

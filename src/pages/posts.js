@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Posts from '../components/Posts'
+import Allposts from '../components/Allposts'
 import {graphql} from 'gatsby'
 
 const postsPage = ({data}) => {
@@ -10,13 +11,14 @@ const postsPage = ({data}) => {
   <Layout>
     <Hero/>
     <Posts posts={posts} title="recently published" />
+    <Allposts />
   </Layout>
     )
 }
 
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: {fields: frontmatter___date, order: DESC} limit: 3) {
       nodes {
         excerpt
         frontmatter {
